@@ -12,8 +12,8 @@ Git clone the fabric-chaincode-demo from the lecture slides in the same folder a
 cd ..
 git clone https://github.com/lley154/fabric-chaincode-demo 
 cd fabric-chaincode-demo  
-sudo apt install npm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc
 nvm install 18.0.0
 npm install
 ```
