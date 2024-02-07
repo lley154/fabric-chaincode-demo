@@ -11,8 +11,10 @@ sudo ./network.sh up createChannel -ca -s couchdb
 
 Git clone the fabric-chaincode-demo from the lecture slides in the same folder as fabric-samples. 
 
-cd fabric-contract-demo  
-
+cd fabric-chaincode-demo  
+sudo apt install npm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install 18.0.0
 npm install
 
 Open two terminals for each organization:
