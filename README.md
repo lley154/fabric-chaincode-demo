@@ -29,6 +29,7 @@ export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.examp
 export CORE_PEER_ADDRESS=localhost:7051
 export PATH=${PWD}/../bin:$PATH
 export FABRIC_CFG_PATH=$PWD/../config/
+sudo chmod a+rwx organizations  ## this is only done for lab env
 
 peer channel list
 ```
@@ -46,14 +47,10 @@ export FABRIC_CFG_PATH=$PWD/../config/
 peer channel list
 ```
 
-If peer command is giving cannot pull image try:
-```
-docker pull --platform linux/x86_64 hyperledger/fabric-nodeenv:2.4 
-```
 In both terminal follow these steps:
 
 ```
-peer lifecycle chaincode package simple_chaincode.tar.gz --path ../../fabric-chaincode-demo --lang node --label simple_chaincode_1.0 
+peer lifecycle chaincode package simple_chaincode.tar.gz --path ../fabric-chaincode-demo --lang node --label simple_chaincode_1.0 
 
 peer lifecycle chaincode install simple_chaincode.tar.gz 
 
