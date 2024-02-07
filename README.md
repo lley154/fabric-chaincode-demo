@@ -55,6 +55,15 @@ peer lifecycle chaincode package simple_chaincode.tar.gz --path ../fabric-chainc
 peer lifecycle chaincode install simple_chaincode.tar.gz 
 
 export PACKAGE_ID=
+```
+For example, the package ID simple_chaincode_1.0:2917d2e879ef2346b2a856b1b1fb9c883526db8afd5d621ea4f47774953c7adb is from the following output
+```
+2024-02-07 16:12:14.444 UTC 0002 INFO [cli.lifecycle.chaincode] submitInstallProposal -> Chaincode code package identifier: simple_chaincode_1.0:2917d2e879ef2346b2a856b1b1fb9c883526db8afd5d621ea4f47774953c7adb
+```
+
+
+```
+
 
 peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --channelID mychannel --name simple_chaincode --version 1.0 --package-id $PACKAGE_ID --sequence 1 --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
 
@@ -74,4 +83,7 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.exa
 peer chaincode query -C mychannel -n simple_chaincode -c '{"function":"get","Args":["k"]}'
 
 peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile ${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n simple_chaincode --peerAddresses localhost:7051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt --peerAddresses localhost:9051 --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt -c '{"function":"del","Args":["k"]}'
+
+peer chaincode query -C mychannel -n simple_chaincode -c '{"function":"get","Args":["k"]}'
+
 ```
