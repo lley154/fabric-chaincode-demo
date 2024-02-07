@@ -8,6 +8,8 @@ sudo ./network.sh down
 sudo ./network.sh up createChannel -ca -s couchdb 
 ```
 Git clone the fabric-chaincode-demo from the lecture slides in the same folder as fabric-samples. 
+cd ..
+git clone https://github.com/lley154/fabric-chaincode-demo 
 ```
 cd fabric-chaincode-demo  
 sudo apt install npm
