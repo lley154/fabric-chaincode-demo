@@ -30,7 +30,7 @@ export CORE_PEER_ADDRESS=localhost:7051
 export PATH=${PWD}/../bin:$PATH
 export FABRIC_CFG_PATH=$PWD/../config/
 sudo chmod a+rwx -R organizations  ## this is only done for lab env
-sudo chmod a+rwx -R config  ## this is only done for lab env
+sudo chmod a+rwx -R ../config  ## this is only done for lab env
 
 peer channel list
 ```
