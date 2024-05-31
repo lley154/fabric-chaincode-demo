@@ -8,17 +8,32 @@ sudo reboot ## restart your vm to free up resources
 ```
 cd fabric-samples/test-network
 ```
+```
 ./network.sh down
+```
+```
 ./network.sh up createChannel -ca -s couchdb 
 ```
 Git clone the fabric-chaincode-demo from the lecture slides in the same folder as fabric-samples.
 ```
 cd ..
+```
+```
 git clone https://github.com/lley154/fabric-chaincode-demo 
+```
+```
 cd fabric-chaincode-demo  
+```
+```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+```
+```
 source ~/.bashrc
+```
+```
 nvm install 18.0.0
+```
+```
 npm install
 ```
 Open two terminals for each organization:
@@ -35,6 +50,8 @@ export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.examp
 export CORE_PEER_ADDRESS=localhost:7051
 export PATH=${PWD}/../bin:$PATH
 export FABRIC_CFG_PATH=$PWD/../config/
+```
+```
 sudo chmod a+rwx -R organizations  ## this is only done for lab env
 sudo chmod a+rwx -R ../config  ## this is only done for lab env
 ```
