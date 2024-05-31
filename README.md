@@ -82,8 +82,15 @@ export FABRIC_CFG_PATH=$PWD/../config/
 ```
 peer channel list
 ```
+You should see the following output in each terminal window:
 
-In both terminal follow these steps:
+2024-05-31 14:56:19.216 UTC 0001 INFO [channelCmd] InitCmdFactory -> Endorser and orderer connections initialized
+Channels peers has joined: 
+mychannel
+
+
+
+In both terminal windows follow these steps:
 
 ```
 peer lifecycle chaincode package simple_chaincode.tar.gz --path ../fabric-chaincode-demo --lang node --label simple_chaincode_1.0 
