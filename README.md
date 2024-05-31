@@ -14,7 +14,15 @@ cd fabric-samples/test-network
 ```
 ./network.sh up createChannel -ca -s couchdb 
 ```
-Git clone the fabric-chaincode-demo from the lecture slides in the same folder as fabric-samples.
+You should see the following output if the network was launched succcesfully.
+
+2024-05-31 14:49:48.835 UTC 0001 INFO [channelCmd] InitCmdFactory -> Endorser and orderer connections initialized
+2024-05-31 14:49:48.888 UTC 0002 INFO [channelCmd] update -> Successfully submitted channel update
+Anchor peer set for org 'Org2MSP' on channel 'mychannel'
+Channel 'mychannel' joined
+
+
+Now git clone the fabric-chaincode-demo from the lecture slides in the same folder as fabric-samples.
 ```
 cd ..
 ```
