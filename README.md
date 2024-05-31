@@ -5,8 +5,8 @@ Make sure fabric samples is installed along with the binaries. Check if the fabr
 ```
 sudo reboot ## restart your vm to free up resources
 cd fabric-samples/test-network
-sudo ./network.sh down
-sudo ./network.sh up createChannel -ca -s couchdb 
+./network.sh down
+./network.sh up createChannel -ca -s couchdb 
 ```
 Git clone the fabric-chaincode-demo from the lecture slides in the same folder as fabric-samples.
 ```
