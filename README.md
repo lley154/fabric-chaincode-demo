@@ -4,7 +4,10 @@
 Make sure fabric samples is installed along with the binaries. Check if the fabric-samples/bin folder contains all the binaries from Lab 1.
 ```
 sudo reboot ## restart your vm to free up resources
+```
+```
 cd fabric-samples/test-network
+```
 ./network.sh down
 ./network.sh up createChannel -ca -s couchdb 
 ```
