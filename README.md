@@ -1,4 +1,4 @@
-# Lab Instructions
+# Lab 2 Instructions
 
 # fabric-chaincode-demo
 Make sure fabric samples is installed along with the binaries. Check if the fabric-samples/bin folder contains all the binaries from Lab 1.
