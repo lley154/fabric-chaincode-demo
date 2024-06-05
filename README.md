@@ -1,6 +1,7 @@
-# Lab 2 Instructions
-
 # fabric-chaincode-demo
+
+## Part 1: Deploying and executing a chaincode
+
 Make sure fabric samples is installed along with the binaries. Check if the fabric-samples/bin folder contains all the binaries from Lab 1.
 ```
 sudo reboot ## restart your vm to free up resources
@@ -157,3 +158,28 @@ peer chaincode invoke -o localhost:7050 --ordererTLSHostnameOverride orderer.exa
 ```
 peer chaincode query -C mychannel -n simple_chaincode -c '{"function":"get","Args":["hello"]}'
 ```
+
+## Part 2: Viewing World State Data in CouchDB
+
+We can port forward from our local machine to the virutal machine and then access the CouchDB UI using port 5984.
+
+ssh usage:
+```
+ssh -L local_port:destination_server_ip:remote_port ssh_server_hostname
+```
+An example on how to connect is
+```
+ssh -i lab2.pem -L 5984:ec2-54-91-100-220.compute-1.amazonaws.com:5984 ubuntu@ec2-54-91-100-220.compute-1.amazonaws.com
+```
+Now, we can access the CouchDB UI locally by using the browser and go to:
+```
+http://localhost:5984/_utils/#login
+username: admin
+password: adminpw
+```
+For the lab report, provide screen shot of the following:
+
+- Go to mychannel_balance_transfer
+- Select the Table view to see the acount balances
+- Select the JSON view to get detailed account info
+
