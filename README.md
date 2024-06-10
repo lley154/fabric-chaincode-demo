@@ -177,9 +177,6 @@ http://localhost:5984/_utils/#login
 username: admin
 password: adminpw
 ```
-For the lab report, provide screen shot of the following:
+For the lab report, provide screen shot of the DB view.
 
-- Go to mychannel_balance_transfer
-- Select the Table view to see the acount balances
-- Select the JSON view to get detailed account info
 
