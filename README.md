@@ -102,7 +102,7 @@ peer lifecycle chaincode install simple_chaincode.tar.gz
 ```
 export PACKAGE_ID=
 ```
-For example, the package ID
+For example, the ```PACKAGE_ID``` is
 ```simple_chaincode_1.0:2917d2e879ef2346b2a856b1b1fb9c883526db8afd5d621ea4f47774953c7adb``` is from the following output
 
 2024-02-07 16:12:14.444 UTC 0002 INFO [cli.lifecycle.chaincode] submitInstallProposal -> Chaincode code package identifier: simple_chaincode_1.0:2917d2e879ef2346b2a856b1b1fb9c883526db8afd5d621ea4f47774953c7adb
